@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 3</title>
+</head>
+<style>
+
+    .sick {
+        fill: limegreen;
+    }
+
+    #smile:hover {
+        animation-name: wiggle;
+        animation-duration: 1.5s;
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes wiggle {
+        10%   {transform: rotate(10deg);}
+        20%   {transform: rotate(-10deg);}
+        30%   {transform: rotate(-10deg);}
+        40%   {transform: rotate(10deg);}
+        50%   {transform: rotate(10deg);}
+        60%   {transform: rotate(-10deg);}
+        70%  {transform: rotate(-10deg);}
+        80%  {transform: rotate(10deg);}
+        90%  {transform: rotate(10deg);}
+        100% {transform: rotate(-10deg);}
+    }
+
+</style>
+<body>
+    <svg id="smile" width="300" height="300" version="1.1" xmlns="http://www.w3.org/2000/svg">
+            <circle id="face" cx="150" cy="150" r="100" stroke="black" fill="yellow" stroke-width="5"/>
+            <path d="M 110 130 C 110 110, 130 110, 130 130" stroke="black" fill="transparent" stroke-width="7"/>
+            <path d="M 170 130 C 170 110, 190 110, 190 130" stroke="black" fill="transparent" stroke-width="7"/>
+            <path d="M 110 160 C 110 200, 190 200, 190 160" stroke="black" fill="transparent" stroke-width="7"/>
+    </svg>
+</body>
+<script>
+
+    let face = document.getElementById("face");
+
+    face.addEventListener("click", () => {
+        if(face.classList.contains("sick")) {
+            face.classList.remove("sick");
+        } else {
+            face.classList.add("sick");
+        }
+    });
+    
+</script>
+</html>
