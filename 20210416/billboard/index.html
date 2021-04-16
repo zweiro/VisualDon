@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://unpkg.com/billboard.js@3.0.2/dist/billboard.min.css" />
+    <script src="https://unpkg.com/billboard.js@3.0.2/dist/billboard.pkgd.min.js"></script>
+  </head>
+  <body>
+    <div id="graph"></div>
+    <script>
+        bb.generate({
+        bindto: "#graph",
+        data: {
+            type: "bar",
+            columns: [
+                [ 'Aarau', 37900 ],
+                [ 'Baden', 32100 ],
+                [ 'Chur', 24300 ],
+                [ 'Burgdorf', 16300 ],
+                [ 'Bellinzona', 16000 ]
+            ]
+        }
+        })
+    </script>
+  </body>
+</html>
